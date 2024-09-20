@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Outlet } from 'react-router-dom';
-
+import styles from './layout.module.scss'
+import gerb from '../assets/images/gerb.png'
+import logo from '../assets/images/logo.png'
 const Layout = () => {
   const defaultMenuItems = [
     { id: 0, label: 'Bosh sahifa', icon: '🏠' },
@@ -38,8 +40,18 @@ const Layout = () => {
 
   return (
     <div className="body">
-      <div className="header">
-        <h1>Menyu Tizimi</h1>
+      <div className={styles.header}>
+        <div className={styles.gerb_part}>
+          <img src={gerb} alt="gerb" />
+          <div className={styles.title}>
+            <span className={styles.span1}>O‘ZBEKISTON RESPUBLIKASI PREZIDENTI HUZURIDAGI</span>
+            <br />
+            <span className={styles.span2}>STATISTIKA AGENTLIGI</span>
+          </div>
+        </div>
+        <div className={styles.logo}>
+          <img src={logo} alt="lgotip" />
+        </div>
       </div>
       <div className="container">
         <div className="sidebar">
@@ -60,8 +72,8 @@ const Layout = () => {
           <Outlet />
         </div>
       </div>
-      <div className="footer">
-        <p>&copy; 2024. Barcha huquqlar himoyalangan.</p>
+      <div className={styles.footer}>
+        <p>&copy; 2024 O’zbekiston Respublikasi Prezidenti huzuridagi Statistika agentligi materiallardan foydalanganda, havolani keltirish majburiy</p>
       </div>
     </div>
   );

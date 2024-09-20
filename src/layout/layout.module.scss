@@ -1,4 +1,47 @@
-.sidebar_part {
+.header {
+    background-color: white;
+    text-align: center;
+    padding: 1rem;
     display: flex;
     justify-content: space-between;
-}
+    align-items: center;
+    .gerb_part {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        img {
+            width: 75px;
+        }
+        .title {
+            text-align: left;
+            color: #4A4A4A;
+            border-left: 1px solid #000000;
+            padding-left: 20px;
+            .span1 {
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 24px;
+            }
+            .span2 {
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 28px;
+            }
+        }
+    }
+  }
+
+  .footer {
+    background-color: white;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    p {
+        width: 40%;
+        margin: 0 auto;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 24px;
+        color: #00599A;
+    }
+  }
